@@ -1,10 +1,15 @@
 @font-face {
     font-family: 'TradeGothic';
+    src: url('/fonts/TradeGothic-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TradeGothicBold';
     src: url('/fonts/TradeGothic-BoldCondTwenty.ttf') format('truetype');
 }
 
 html {
-    font-family: 'TradeGothic';
+    font-family: 'TradeGothicBold';
     margin: 0;
 }
 
@@ -112,7 +117,6 @@ body>div:nth-of-type(7)>ul {
 
 #page {
     color: black;
-    font-family: 'TradeGothic';
     margin-left: 1037px;
     margin-top: -166px;
     font-size: 90px;
