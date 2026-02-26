@@ -164,10 +164,6 @@ li #guide-time {
     opacity: 100%;
 }
 
-/* =========================
-   EPG GRID (INSIDE background only)
-========================= */
-
 #epg {
     display: flex;
     flex-direction: column;
@@ -176,7 +172,6 @@ li #guide-time {
     margin-top: -40px;
 }
 
-/* Grid layout */
 .epg-row {
     display: grid;
     grid-template-columns: 260px 370px 370px 370px;
@@ -184,12 +179,10 @@ li #guide-time {
     height: 60px;
 }
 
-/* Header row */
 .epg-header {
     margin-bottom: 15px;
 }
 
-/* Date (top-left cell) */
 .epg-date {
     color: white;
     font-size: 43px;
@@ -199,7 +192,6 @@ li #guide-time {
     background-color: #012252;
 }
 
-/* Time header cells */
 .epg-time {
     color: white;
     font-size: 40px;
@@ -210,19 +202,14 @@ li #guide-time {
     background-color: #012252;
 }
 
-/* Second time (6:00a) */
 .epg-header .epg-time:nth-child(3) {
     margin-left: 112px;
-    /* adjust independently */
 }
 
-/* Third time (6:30a) */
 .epg-header .epg-time:nth-child(4) {
     margin-left: 175px;
-    /* adjust independently */
 }
 
-/* Channel column (rows only) */
 .epg-channel {
     color: #9ec9ea;
     font-size: 40px;
@@ -232,36 +219,26 @@ li #guide-time {
     background-color: #012252;
 }
 
-/* Second channel row */
 #epg .epg-row:nth-child(3) .epg-channel {
     margin-top: -68px;
-    /* tweak this */
     margin-left: 28px;
 }
 
-/* Third channel row */
 #epg .epg-row:nth-child(4) .epg-channel {
     margin-top: -71px;
-    /* tweak this */
     margin-left: 26px;
 }
 
-/* Fourth channel row */
 #epg .epg-row:nth-child(5) .epg-channel {
     margin-top: -80px;
-    /* tweak as needed */
 }
 
-/* Fifth channel row */
 #epg .epg-row:nth-child(6) .epg-channel {
     margin-top: -86px;
-    /* tweak as needed */
 }
 
-/* Sixith channel row */
 #epg .epg-row:nth-child(7) .epg-channel {
     margin-top: -89px;
-    /* tweak as needed */
     margin-left: 27px;
 }
 
@@ -269,24 +246,15 @@ li #guide-time {
     background: #0b4f8a;
     color: white;
     font-size: 40px;
-
     display: flex;
     align-items: center;
-
     height: 52px;
-
-    /* Let grid control width */
     width: 100%;
-
-    /* Remove all manual offsets */
     margin: 0;
-
     padding-left: 20px;
-
     transform: scale(1.35, 1);
 }
 
-/* Active program highlight */
 .epg-program.active {
     background: #f2a900;
     color: black;
@@ -315,6 +283,6 @@ li #guide-time {
 
 .li-text {
     position: relative;
-    left: 10px;   /* move right */
-    top: -0px;    /* move up */
+    left: 10px;
+    top: -0px;
 }
