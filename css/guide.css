@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'TradeGothic';
+    src: url('/fonts/TradeGothic-BoldCondTwenty.ttf') format('truetype');
+}
+
+html {
+    font-family: 'TradeGothic';
+    margin: 0;
+}
+
+body {
+    /* background-image: url(/img/demo/channel_guide-16-9.png); */
+    background-size: 1920px 940px;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-color: black;
+}
+
+img {
+    width: 208px;
+    height: 153px;
+    margin-left: 130px;
+    margin-top: 28px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    color: #185b8f;
+}
+
+body>div:nth-of-type(7)>ul {
+    margin-top: -66px;
+    margin-left: 257px;
+    font-size: 25px;
+    transform: scale(1.38, 1);
+}
+
+#miniplayer {
+    position: absolute;
+    right: -541px;
+    top: 48px;
+    width: 493px;
+    height: 248px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    outline: 7px solid #ecf4f7;
+    box-sizing: content-box;
+}
+
+#miniplayer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#background-top {
+    position: fixed;
+    top: 0px;
+    left: -8px;
+    width: calc(100vw + 8px);
+    height: 250px;
+    background: #ecf4f7;
+    z-index: -999;
+    opacity: 100%;
+}
+
+#left {
+    position: fixed;
+    top: 184px;
+    left: -8px;
+    width: 417px;
+    height: 62px;
+    background: #b4d5f0;
+}
+
+#middle {
+    position: fixed;
+    top: 184px;
+    left: 416px;
+    width: 851px;
+    height: 62px;
+    background: #b4d5f0;
+}
+
+#right {
+    position: fixed;
+    top: 184px;
+    left: 1772px;
+    width: 148px;
+    height: 62px;
+    background: #b4d5f0;
+}
+
+#background-bottom {
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    height: 690px;
+    background: linear-gradient(to bottom,
+            #0075b9 5%,
+            #0086c8 20%,
+            #0086c8 60%,
+            #005ea5 74%);
+    z-index: -999;
+    opacity: 100%;
+}
+
+#page {
+    color: black;
+    font-family: 'TradeGothic';
+    margin-left: 1037px;
+    margin-top: -166px;
+    font-size: 90px;
+    font-weight: 500;
+    opacity: 20%;
+    transform: scale(1.3, .8);
+}
+
+#title {
+    color: #181953;
+    margin-left: 477px;
+    margin-top: -79px;
+    font-size: 60px;
+    font-weight: 100;
+    transform: scale(1.1, .75);
+}
+
+li #rating {
+    margin-left: 290px;
+}
+
+li #guide-time {
+    position: relative;
+    left: 70px;
+    display: block;
+    text-align: right;
+}
+
+#description {
+    color: white;
+    margin-left: 347px;
+    margin-top: -30px;
+    word-wrap: normal;
+    font-weight: 100;
+    font-size: 32px;
+    width: 580px;
+    transform: scale(1.73, 1.25);
+}
+
+#epg-background {
+    position: fixed;
+    width: 1780px;
+    height: 435px;
+    background-color: #012252;
+    margin-left: 132px;
+    margin-top: -10px;
+    border-radius: 10px;
+    padding: 40px 0 0 0;
+    opacity: 100%;
+}
+
+/* =========================
+   EPG GRID (INSIDE background only)
+========================= */
+
+#epg {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 40px;
+    margin-top: -40px;
+}
+
+/* Grid layout */
+.epg-row {
+    display: grid;
+    grid-template-columns: 260px 370px 370px 370px;
+    align-items: center;
+    height: 60px;
+}
+
+/* Header row */
+.epg-header {
+    margin-bottom: 15px;
+}
+
+/* Date (top-left cell) */
+.epg-date {
+    color: white;
+    font-size: 43px;
+    padding-left: 12px;
+    margin-top: -10px;
+    transform: scale(1.3, 1);
+    background-color: #012252;
+}
+
+/* Time header cells */
+.epg-time {
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    margin-top: -12px;
+    margin-left: 50px;
+    transform: scale(1.3, 1);
+    background-color: #012252;
+}
+
+/* Second time (6:00a) */
+.epg-header .epg-time:nth-child(3) {
+    margin-left: 112px;
+    /* adjust independently */
+}
+
+/* Third time (6:30a) */
+.epg-header .epg-time:nth-child(4) {
+    margin-left: 175px;
+    /* adjust independently */
+}
+
+/* Channel column (rows only) */
+.epg-channel {
+    color: #9ec9ea;
+    font-size: 40px;
+    margin-left: 26px;
+    margin-top: -60px;
+    transform: scale(1.4, 1);
+    background-color: #012252;
+}
+
+/* Second channel row */
+#epg .epg-row:nth-child(3) .epg-channel {
+    margin-top: -68px;
+    /* tweak this */
+    margin-left: 28px;
+}
+
+/* Third channel row */
+#epg .epg-row:nth-child(4) .epg-channel {
+    margin-top: -71px;
+    /* tweak this */
+    margin-left: 26px;
+}
+
+/* Fourth channel row */
+#epg .epg-row:nth-child(5) .epg-channel {
+    margin-top: -80px;
+    /* tweak as needed */
+}
+
+/* Fifth channel row */
+#epg .epg-row:nth-child(6) .epg-channel {
+    margin-top: -86px;
+    /* tweak as needed */
+}
+
+/* Sixith channel row */
+#epg .epg-row:nth-child(7) .epg-channel {
+    margin-top: -89px;
+    /* tweak as needed */
+    margin-left: 27px;
+}
+
+.epg-program {
+    background: #0b4f8a;
+    color: white;
+    font-size: 40px;
+
+    display: flex;
+    align-items: center;
+
+    height: 52px;
+
+    /* Let grid control width */
+    width: 100%;
+
+    /* Remove all manual offsets */
+    margin: 0;
+
+    padding-left: 20px;
+
+    transform: scale(1.35, 1);
+}
+
+/* Active program highlight */
+.epg-program.active {
+    background: #f2a900;
+    color: black;
+}
+
+.epg-row .epg-program:nth-child(2) {
+    grid-column: 2;
+    margin-top: -60px;
+    margin-left: 60px;
+    width: 299px;
+}
+
+.epg-row .epg-program:nth-child(3) {
+    grid-column: 3;
+    margin-top: -60px;
+    margin-left: 130px;
+    width: 303px;
+}
+
+.epg-row .epg-program:nth-child(4) {
+    grid-column: 4;
+    margin-top: -60px;
+    margin-left: 205px;
+    width: 303px;
+}
+
+.li-text {
+    position: relative;
+    left: 10px;   /* move right */
+    top: -0px;    /* move up */
+}
