@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'TradeGothic';
-    src: url('/fonts/TradeGothic-Regular.otf') format('opentype');
+    src: url('../fonts/TradeGothic-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'TradeGothicBold';
-    src: url('/fonts/TradeGothic-BoldCondTwenty.ttf') format('truetype');
+    src: url('../fonts/TradeGothic-BoldCondTwenty.ttf') format('truetype');
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    /* background-image: url(/img/demo/channel_guide-16-9.png); */
+    /* background-image: url(../img/demo/channel_guide-16-9.png); */
     background-size: 1920px 940px;
     background-repeat: no-repeat;
     position: fixed;
